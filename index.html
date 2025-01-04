@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Gravitas+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>ToDoList</h1>
+
+    <div class="input_user_name">
+        <input type="text" placeholder="Введите ваше имя" id="input_user_name">  
+        <button id="button_user_name">Сохранить имя</button>  
+    </div>
+    
+    <div class="inputTask">
+        <div class="AddTasks">
+            <input type="text" id="taskInput" placeholder="Добавить новую задачу">
+            <button onclick="AddTask()" id="button__addTask">Добавить задачу</button>
+        </div>
+        <div class="find">
+            <input type="text" oninput="filterTasks()" id="filterTasks" placeholder="поиск задачи">
+        </div>
+        
+        
+    </div>
+    <div class="sortTask">
+        <button id="allTasks" onclick="showAllTasks()">Все задачи</button>
+        <button id="activeTasks" onclick="showActiveTasks()">Задачи в работе</button>
+        <button id="inactiveTasks" onclick="showCompletedTasks()">Выполненнные задачи</button>
+    </div>
+    
+    <div class="tasks">
+        <ul id="taskList">        
+        </ul>    
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
